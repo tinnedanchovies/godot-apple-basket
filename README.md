@@ -1,8 +1,11 @@
 # breakfast
 cereal
+yogurt
+
 
 # lunch
-sandwich
+subway sandwich
+
 
 # dinner
 soup
