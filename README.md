@@ -1,11 +1,16 @@
 # breakfast
-cereal
+beef
 <br>
-yogurt
+protein
 
 
 # lunch
-<body>subway sandwich</body>
+subway sandwich
+<br>
+<br>
+pizza
+<br>
+salad
 
 
 # dinner
