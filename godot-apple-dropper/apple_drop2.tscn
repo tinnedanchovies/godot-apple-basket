@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbjhsnj3d8230"]
+[gd_scene load_steps=8 format=3 uid="uid://bxx5reud5msv"]
 
-[ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_a02nm"]
 [ext_resource type="Script" path="res://basket2.gd" id="1_alud2"]
 [ext_resource type="Texture2D" uid="uid://b3sos250viojy" path="res://basket.png" id="2_a02nm"]
+[ext_resource type="Script" path="res://apple2.gd" id="3_wwnaa"]
+[ext_resource type="Texture2D" uid="uid://demt8v31js5c5" path="res://apple.png" id="4_s7866"]
 [ext_resource type="Script" path="res://score_label.gd" id="5_a02nm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iftsf"]
+radius = 0.894428
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mewul"]
 size = Vector2(161, 87)
