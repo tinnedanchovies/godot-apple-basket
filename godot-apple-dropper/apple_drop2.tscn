@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpokup3allfxr"]
+[gd_scene load_steps=8 format=3 uid="uid://bxx5reud5msv"]
 
-[ext_resource type="Script" uid="uid://dv14hopxd5ydt" path="res://basket2.gd" id="1_alud2"]
-[ext_resource type="Texture2D" uid="uid://c0dhvr80jjw24" path="res://basket.png" id="2_a02nm"]
-[ext_resource type="Script" uid="uid://bo1uttoskk1xb" path="res://apple2.gd" id="3_wwnaa"]
-[ext_resource type="Texture2D" uid="uid://ggh81x7hffhf" path="res://apple.png" id="4_s7866"]
-[ext_resource type="Script" uid="uid://dql40i0eqsei6" path="res://score_label.gd" id="5_a02nm"]
+[ext_resource type="Script" path="res://basket2.gd" id="1_alud2"]
+[ext_resource type="Texture2D" uid="uid://b3sos250viojy" path="res://basket.png" id="2_a02nm"]
+[ext_resource type="Script" path="res://apple2.gd" id="3_wwnaa"]
+[ext_resource type="Texture2D" uid="uid://demt8v31js5c5" path="res://apple.png" id="4_s7866"]
+[ext_resource type="Script" path="res://score_label.gd" id="5_a02nm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iftsf"]
 radius = 0.894428
