@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://uxducp01b5cs"]
+
+[ext_resource type="Texture2D" uid="uid://ggh81x7hffhf" path="res://apple.png" id="1_uput2"]
+[ext_resource type="Script" uid="uid://dhj3glmad2fkt" path="res://apple.gd" id="2_m26sv"]
+[ext_resource type="Texture2D" uid="uid://c0dhvr80jjw24" path="res://basket.png" id="3_oestm"]
+[ext_resource type="Script" uid="uid://dhmj8rj77rqou" path="res://basket.gd" id="4_5o5d5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Apple" type="Sprite2D" parent="."]
+position = Vector2(583, 121)
+scale = Vector2(0.169922, 0.169922)
+texture = ExtResource("1_uput2")
+script = ExtResource("2_m26sv")
+
+[node name="Basket" type="Sprite2D" parent="."]
+position = Vector2(588, 573)
+scale = Vector2(0.457031, 0.457031)
+texture = ExtResource("3_oestm")
+script = ExtResource("4_5o5d5")
