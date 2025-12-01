@@ -10,11 +10,11 @@ radius = 0.894428
 script = ExtResource("1_n78qv")
 metadata/_edit_group_ = true
 
-[node name="Apple" type="Sprite2D" parent="."]
+[node name="apple_sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.0791015, 0.0791015)
 texture = ExtResource("2_whgpf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="apple_collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 scale = Vector2(20, 20)
 shape = SubResource("CircleShape2D_iftsf")
