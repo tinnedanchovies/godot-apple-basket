@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfjbwsohf2o5v"]
+[gd_scene load_steps=6 format=3 uid="uid://dfjbwsohf2o5v"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://cp4vh8klfw13f" path="res://basket.tscn" id="2_1y8me"]
 [ext_resource type="PackedScene" uid="uid://dv5o1w3ocbfpn" path="res://score_label.tscn" id="3_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://lkrv3xufiibc" path="res://bomb.tscn" id="4_n7ypv"]
+[ext_resource type="Script" uid="uid://cy4mfgnn20jst" path="res://bomb.gd" id="5_0s5r2"]
 
 [node name="level_2" type="Node2D"]
 
@@ -17,5 +19,9 @@ offset_left = 17.0
 offset_top = 10.0
 offset_right = 17.0
 offset_bottom = 10.0
+
+[node name="bomb" parent="." instance=ExtResource("4_n7ypv")]
+position = Vector2(242, -21)
+script = ExtResource("5_0s5r2")
 
 [connection signal="body_entered" from="Basket" to="score_board" method="_on_basket_body_entered"]
