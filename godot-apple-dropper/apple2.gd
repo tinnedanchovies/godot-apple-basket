@@ -2,10 +2,8 @@ extends CharacterBody2D
 
 var gravity = 30
 var score = 0
-var score_label
 
 func _ready():
-	score_label = get_node("/root/Node2D/ScoreLabel")
 	velocity = Vector2(0, 200)
 	
 func _physics_process(delta):
@@ -21,5 +19,4 @@ func _on_basket_body_entered(body: Node2D) -> void:
 	position.y = 0
 	position.x = randi_range(0, 1500)
 	velocity.y = 200
-	score = score + 1
-	score_label.text = str(score)
+	Globals.score = Globals.score + 1
