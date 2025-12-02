@@ -14,7 +14,3 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_LEFT):
 		position.x = position.x - 30
 	
-
-func _on_body_entered(body: Node2D):
-	score = score + 1
-	score_board.text = str(score)
