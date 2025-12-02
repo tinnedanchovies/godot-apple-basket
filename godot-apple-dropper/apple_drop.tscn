@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ncrg6d6dgku3"]
 
-[ext_resource type="Texture2D" uid="uid://demt8v31js5c5" path="res://apple.png" id="1_uput2"]
+[ext_resource type="Texture2D" uid="uid://demt8v31js5c5" path="res://sprites/apple.png" id="1_uput2"]
 [ext_resource type="Script" path="res://apple.gd" id="2_m26sv"]
-[ext_resource type="Texture2D" uid="uid://b3sos250viojy" path="res://basket.png" id="3_oestm"]
+[ext_resource type="Texture2D" path="res://basket.png" id="3_oestm"]
 [ext_resource type="Script" path="res://basket.gd" id="4_5o5d5"]
 
 [node name="Node2D" type="Node2D"]

@@ -10,7 +10,7 @@
 position = Vector2(395, 144)
 
 [node name="Basket" parent="." instance=ExtResource("2_hn12h")]
-position = Vector2(407, 421)
+position = Vector2(500, 300)
 
 [node name="score_board" parent="." instance=ExtResource("3_hn12h")]
 offset_left = 17.0
