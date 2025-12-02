@@ -1,4 +1,5 @@
 extends Area2D
+<<<<<<< Updated upstream
 var score_board
 
 func _ready():
@@ -6,6 +7,13 @@ func _ready():
 	score_board = get_node("/root/level_1/score_board/score")
 	print(score_board)
 	
+=======
+
+var score = 0
+
+func _ready():
+	position = Vector2(500, 550)
+>>>>>>> Stashed changes
 	
 func _process(delta):
 	if Input.is_key_pressed(KEY_RIGHT):

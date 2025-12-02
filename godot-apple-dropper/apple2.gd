@@ -8,11 +8,12 @@ func _ready():
 	
 func _physics_process(delta):
 	move_and_slide()
-	velocity.y += gravity
-	if position.y > 1100:
-		position.y = 0
-		position.x = randi_range(0, 1500)
-		velocity.y = 200
+	if Globals.random == 1:
+		velocity.y += gravity
+		if position.y > 1100:
+			position.y = 0
+			position.x = randi_range(0, 1500)
+			velocity.y = 200
 
 
 #func _on_basket_body_entered(body: Node2D) -> void:
