@@ -16,11 +16,7 @@ texture = ExtResource("4_ihfcg")
 position = Vector2(395, 144)
 
 [node name="Basket" parent="." instance=ExtResource("2_hn12h")]
-<<<<<<< Updated upstream
-position = Vector2(500, 300)
-=======
 position = Vector2(603, 546)
->>>>>>> Stashed changes
 
 [node name="score_board" parent="." instance=ExtResource("3_hn12h")]
 offset_left = 17.0
