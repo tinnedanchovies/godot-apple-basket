@@ -1,11 +1,12 @@
 extends Area2D
 
-var score = 0
+var score_board
 
 func _ready():
 	position = Vector2(500, 550)
+	score_board = get_node("/root/level_1/score_board/score")
 	
-var score = 0
+	
 
 func _process(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
@@ -15,8 +16,10 @@ func _process(delta):
 		position.x = position.x - 30
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "ppple":
+	if body.name == "Apple":
 		print("it's just an apple")
+		Globals.score = Globals.score + 1
+		score_board.text = str(Globals.score)
 		
-	Globals.score = Globals.score + 1
-	score_board.text = str(Globals.score)
+		
+	

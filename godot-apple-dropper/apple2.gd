@@ -16,10 +16,5 @@ func _physics_process(delta):
 			velocity.y = 200
 
 
-#func _on_basket_body_entered(body: Node2D) -> void:
-	#if body.name == "Apple":
-		#position.y = 0
-		#position.x = randi_range(0, 1500)
-		#velocity.y = 200
-		#Globals.score = Globals.score + 1
+
 	

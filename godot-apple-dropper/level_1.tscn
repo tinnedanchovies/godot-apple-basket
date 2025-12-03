@@ -23,5 +23,3 @@ offset_left = 17.0
 offset_top = 10.0
 offset_right = 17.0
 offset_bottom = 10.0
-
-[connection signal="body_entered" from="Basket" to="Apple" method="_on_basket_body_entered"]
