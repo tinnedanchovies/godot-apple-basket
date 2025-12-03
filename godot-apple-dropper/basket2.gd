@@ -1,10 +1,9 @@
 extends Area2D
-var score_board
+
+var score = 0
 
 func _ready():
-	position = Vector2(500, 900)
-	score_board = get_node("/root/level_1/score_board/score")
-	print(score_board)
+	position = Vector2(500, 550)
 	
 var score = 0
 
