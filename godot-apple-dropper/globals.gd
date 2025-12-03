@@ -4,6 +4,7 @@ var score = 0
 var apple_speed = Vector2(0, 200)
 var random = 1
 var timer = Timer.new()  
+var apple_counter = 0
 
 func _ready():  
 	add_child(timer)  
@@ -11,7 +12,8 @@ func _ready():
 	
 
 func _process(delta: float) -> void:
-	randomizer()
+	#randomizer()
+	pass
 
 func randomizer():
 	random = randi_range(1,3)
