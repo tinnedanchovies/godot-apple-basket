@@ -22,4 +22,11 @@ func _on_body_entered(body: Node2D) -> void:
 		score_board.text = str(Globals.score)
 		
 		
+	if body.name == "golden_apple":
+		print("it's a golden apple")
+		Globals.score = Globals.score + 5
+		score_board.text = str(Globals.score)
+		
+		
+		
 	

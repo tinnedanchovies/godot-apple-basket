@@ -16,11 +16,14 @@ func _physics_process(delta):
 			position.y = 0
 			position.x = randi_range(0, 1500)
 			velocity.y = 200
+			Globals.apple_counter += Globals.apple_counter
 
 func _on_basket_body_entered(body: Node2D) -> void:
+	print("this apple will now disappear")
 	position.y = 0
 	position.x = randi_range(0, 1150)
 	velocity.y = 200
+	Globals.apple_counter += Globals.apple_counter
 	
 	
 	
