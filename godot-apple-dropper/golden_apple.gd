@@ -1,16 +1,18 @@
 extends CharacterBody2D
 
-var gravity = 30
+var gravity = 15
 var score = 0
 
 
 func _ready():
-	velocity = Globals.apple_speed
+	velocity = Globals.golden_apple_speed
 	
 func _physics_process(delta):
-	if Globals.apple_counter >= 3:
+	visible = false
+	if Globals.random >= 7:
+		visible = true
 		move_and_slide()
-		if Globals.random == 1:
+		if Globals.apple_const == 1:
 			velocity.y += gravity
 		
 			if position.y > 1100:
@@ -20,8 +22,10 @@ func _physics_process(delta):
 
 
 func _on_basket_body_entered(body: Node2D) -> void:
-	print("this golden apple will now disappear")
-	position.y = 0
-	position.x = randi_range(0, 1500)
-	velocity.y = 200
+	if body.name == "golden_apple":
+		print("this golden apple will now disappear")
+		position.y = 0
+		position.x = randi_range(0, 1500)
+		velocity.y = 200
+		#Globals.apple_counter = 0
 	
