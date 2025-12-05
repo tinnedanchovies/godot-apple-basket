@@ -6,14 +6,16 @@ var score = 0
 func _ready():
 	velocity = Globals.apple_speed
 	
-func _physics_process(delta):
-	move_and_slide()  
-	if Globals.random == 2:
+func _physics_process(delta: float):
+	visible = false
+	if Globals.random >= 2:
+		visible = true
 		velocity.y += gravity
 		if position.y > 1100:
 			position.y = 0
 			position.x = randi_range(0, 1500)
 			velocity.y = 200
+		move_and_slide() 
 
 
 func _on_basket_body_entered(body: Node2D) -> void:
@@ -21,4 +23,4 @@ func _on_basket_body_entered(body: Node2D) -> void:
 		position.y = 0
 		position.x = randi_range(0, 1500)
 		velocity.y = 200
-		Globals.score = Globals.score - 1
+		Globals.score = Globals.score - 5

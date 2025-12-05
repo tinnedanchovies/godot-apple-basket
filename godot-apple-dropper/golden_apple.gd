@@ -8,14 +8,8 @@ func _ready():
 	velocity = Globals.golden_apple_speed
 	position.x = randi_range(0, 1500)
 	
-func _process(delta: float):
-	
-	pass
-	
 func _physics_process(delta: float):
 		visible = false
-	#if Globals.apple_random >= 2:
-		#visible = true
 		if Globals.random >= 8:
 			visible = true
 			velocity.y += gravity
