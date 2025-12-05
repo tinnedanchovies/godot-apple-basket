@@ -16,10 +16,12 @@ func _process(delta):
 		position.x = position.x - 30
 
 func _on_body_entered(body: Node2D) -> void:
+	#scoring 
 	if body.name == "Apple":
 		print("it's just an apple")
 		Globals.score = Globals.score + 1
 		score_board.text = str(Globals.score)
+		
 		
 		
 	if body.name == "golden_apple":
