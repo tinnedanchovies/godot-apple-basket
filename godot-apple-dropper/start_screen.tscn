@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c3kesfgpn64y3" path="res://sprites/basket.png" id="2_k1na2"]
 [ext_resource type="FontFile" uid="uid://cbcl2v0ygqviv" path="res://font/Kirsty Bd.otf" id="3_vdywr"]
 [ext_resource type="FontFile" uid="uid://dn7ir11bv5loy" path="res://font/Kirsty Bd It.otf" id="4_k1na2"]
-[ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="5_vdywr"]
+[ext_resource type="Script" uid="uid://cmmc2fp53fmen" path="res://start_button.gd" id="5_vdywr"]
 
 [sub_resource type="Animation" id="Animation_l67vj"]
 length = 0.001

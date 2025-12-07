@@ -1,6 +1,4 @@
 extends Control
 
-
-
 func _process(delta: float) -> void:
 	$score.text = "Score: " + str(Globals.score)

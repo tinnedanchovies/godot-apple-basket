@@ -1,0 +1,141 @@
+[gd_scene load_steps=6 format=3 uid="uid://6hykbqsg0gwq"]
+
+[ext_resource type="Script" uid="uid://dvrsnlbgpljcg" path="res://pause_menu.gd" id="1_05uyy"]
+[ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_p81d2"]
+[ext_resource type="Texture2D" uid="uid://dprcsu4fjwmp" path="res://sprites/apple_standin.webp" id="3_2nc7s"]
+[ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_p81d2"]
+[ext_resource type="Script" uid="uid://btb4xcds2xjfy" path="res://continue.gd" id="5_2nc7s"]
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05uyy")
+menuNode = "pause_menu"
+scoreNode = "Panel/score"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.5
+offset_top = -233.5
+offset_right = 365.5
+offset_bottom = 233.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.398003
+anchor_top = 0.188272
+anchor_right = 0.601997
+anchor_bottom = 0.283951
+offset_left = -42.9405
+offset_top = -56.4228
+offset_right = 37.9405
+offset_bottom = -52.1049
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.843137, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_p81d2")
+theme_override_font_sizes/font_size = 40
+text = "Pause Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="score" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -19.5
+offset_right = 62.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.843137, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_p81d2")
+theme_override_font_sizes/font_size = 30
+text = "Score = 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="AppleStandin" type="Sprite2D" parent="Panel"]
+position = Vector2(516.5, 54.5)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("3_2nc7s")
+
+[node name="AppleStandin2" type="Sprite2D" parent="Panel"]
+position = Vector2(211.5, 54.5)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("3_2nc7s")
+
+[node name="restart" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 125.0
+offset_top = 179.0
+offset_right = 230.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
+script = ExtResource("4_p81d2")
+level = "res://level_1.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="to_start" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 179.0
+offset_right = -124.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu"
+script = ExtResource("4_p81d2")
+level = "res://start_screen.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="continue" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = 178.5
+offset_right = 52.5
+offset_bottom = 219.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
+script = ExtResource("5_2nc7s")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/restart" to="Panel/restart" method="_on_pressed"]
+[connection signal="pressed" from="Panel/to_start" to="Panel/to_start" method="_on_pressed"]
+[connection signal="pressed" from="Panel/continue" to="Panel/continue" method="_on_pressed"]

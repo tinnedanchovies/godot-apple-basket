@@ -3,10 +3,9 @@ extends CharacterBody2D
 var gravity = 15
 var score = 0
 
-
 func _ready():
 	velocity = Globals.apple_speed
-	
+
 func _physics_process(delta):
 	velocity.y += gravity
 	if position.y > 1100:
