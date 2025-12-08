@@ -1,10 +1,10 @@
-extends Area2D
+extends CharacterBody2D
 
 var score_board
 
 func _ready():
 	position = Vector2(500, 550)
-	score_board = get_node("/root/level_1/score_board/score")
+	score_board = get_node("/root/level_3/score_board/score")
 
 func _process(delta):
 	if Input.is_key_pressed(KEY_RIGHT):

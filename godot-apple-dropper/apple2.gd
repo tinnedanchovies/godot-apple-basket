@@ -10,10 +10,9 @@ func _physics_process(delta):
 	velocity.y += gravity
 	if position.y > 1100:
 		position.y = 0
-		position.x = randi_range(0, 1500)
+		position.x = randi_range(0, 1100)
 		velocity.y = 200
 	move_and_slide()
-		
 
 func _on_basket_body_entered(body: Node2D) -> void:
 	if body.name == "Apple":
@@ -22,7 +21,3 @@ func _on_basket_body_entered(body: Node2D) -> void:
 		velocity.y = 200
 		Globals.apple_counter = Globals.apple_counter + 1
 		print("apple counter:", Globals.apple_counter)
-
-	
-	
-	

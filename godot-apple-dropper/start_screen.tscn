@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dypmloxu02j7m"]
+[gd_scene load_steps=11 format=3 uid="uid://dypmloxu02j7m"]
 
 [ext_resource type="Texture2D" uid="uid://dprcsu4fjwmp" path="res://sprites/apple_standin.webp" id="1_afy8x"]
+[ext_resource type="Texture2D" uid="uid://c6vpphvuj77g8" path="res://sprites/golden_apple_sprite.webp" id="1_l67vj"]
+[ext_resource type="Texture2D" uid="uid://cjef6iwgwv7wu" path="res://sprites/pixel_bomb.png" id="2_076lj"]
 [ext_resource type="Texture2D" uid="uid://c3kesfgpn64y3" path="res://sprites/basket.png" id="2_k1na2"]
 [ext_resource type="FontFile" uid="uid://cbcl2v0ygqviv" path="res://font/Kirsty Bd.otf" id="3_vdywr"]
 [ext_resource type="FontFile" uid="uid://dn7ir11bv5loy" path="res://font/Kirsty Bd It.otf" id="4_k1na2"]
@@ -209,9 +211,32 @@ offset_right = 1154.0
 offset_bottom = 646.0
 color = Color(0.672573, 0.696853, 0.620414, 1)
 
+[node name="GoldenAppleSprite" type="Sprite2D" parent="Start"]
+position = Vector2(1049, 508)
+rotation = 0.186779
+scale = Vector2(0.727778, 0.727778)
+texture = ExtResource("1_l67vj")
+
+[node name="PixelBomb" type="Sprite2D" parent="Start"]
+position = Vector2(960, 534)
+rotation = 0.0993545
+texture = ExtResource("2_076lj")
+
+[node name="AppleStandin2" type="Sprite2D" parent="Start"]
+position = Vector2(121, 540)
+rotation = -0.268595
+scale = Vector2(0.408333, 0.408333)
+texture = ExtResource("1_afy8x")
+
 [node name="AppleStandin" type="Sprite2D" parent="Start"]
 position = Vector2(571, 83)
 scale = Vector2(0.388889, 0.388889)
+texture = ExtResource("1_afy8x")
+
+[node name="AppleStandin3" type="Sprite2D" parent="Start"]
+position = Vector2(195, 524)
+rotation = -0.035741
+scale = Vector2(0.558333, 0.558333)
 texture = ExtResource("1_afy8x")
 
 [node name="Basket" type="Sprite2D" parent="Start"]

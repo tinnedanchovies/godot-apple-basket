@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://6fqvgma5j1qx"]
+[gd_scene load_steps=12 format=3 uid="uid://6fqvgma5j1qx"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://cp4vh8klfw13f" path="res://basket.tscn" id="2_hn12h"]
@@ -9,12 +9,37 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="8_5rr72"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bjebc"]
+distance = -4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rr72"]
+size = Vector2(165, 724)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyffv"]
+size = Vector2(217, 722)
+
 [node name="level_1" type="Node2D"]
 
 [node name="background_image" type="Sprite2D" parent="."]
 position = Vector2(566, 245)
 scale = Vector2(1.135, 1.135)
 texture = ExtResource("4_ihfcg")
+
+[node name="bottom" type="StaticBody2D" parent="."]
+position = Vector2(744, 692)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
+shape = SubResource("WorldBoundaryShape2D_bjebc")
+
+[node name="walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2(-72.5, 351)
+shape = SubResource("RectangleShape2D_5rr72")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2(1252.5, 354)
+shape = SubResource("RectangleShape2D_gyffv")
 
 [node name="Apple" parent="." instance=ExtResource("1_hbghi")]
 position = Vector2(395, 144)
@@ -23,6 +48,8 @@ position = Vector2(395, 144)
 
 [node name="Basket" parent="." instance=ExtResource("2_hn12h")]
 position = Vector2(603, 546)
+collision_layer = 0
+collision_mask = 0
 
 [node name="score_board" parent="." instance=ExtResource("3_hn12h")]
 offset_left = 17.0

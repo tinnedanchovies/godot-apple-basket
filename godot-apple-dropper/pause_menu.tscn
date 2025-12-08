@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_05uyy")
-menuNode = "pause_menu"
+menuNode = "Panel"
 scoreNode = "Panel/score"
 metadata/_edit_use_anchors_ = true
 
