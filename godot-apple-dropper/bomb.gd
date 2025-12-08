@@ -17,10 +17,8 @@ func _physics_process(delta: float):
 			velocity.y = 200
 		move_and_slide() 
 
-
-func _on_basket_body_entered(body: Node2D) -> void:
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "bomb":
 		position.y = 0
 		position.x = randi_range(0, 1500)
 		velocity.y = 200
-		
