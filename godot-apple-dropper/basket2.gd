@@ -4,7 +4,7 @@ var score_board
 
 func _ready():
 	position = Vector2(500, 550)
-	score_board = get_node("/root/level_1/score_board/score")
+	score_board = get_node("/root/level_3/score_board/score")
 
 func _process(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
@@ -19,7 +19,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print("it's just an apple")
 		Globals.score = Globals.score + 1
 		score_board.text = str(Globals.score)
+		
 	if body.name == "golden_apple":
 		print("it's a golden apple")
 		Globals.score = Globals.score + 5
 		score_board.text = str(Globals.score)
+		
+	if body.name == "bomb":
+		print("it's a golden apple")
+		Globals.score = Globals.score - 5
+		score_board.text = str(Globals.score)
+		
+		

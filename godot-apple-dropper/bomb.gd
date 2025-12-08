@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var gravity = 30
+var gravity = 20
 var score = 0
 
 func _ready():
@@ -23,4 +23,4 @@ func _on_basket_body_entered(body: Node2D) -> void:
 		position.y = 0
 		position.x = randi_range(0, 1500)
 		velocity.y = 200
-		Globals.score = Globals.score - 5
+		

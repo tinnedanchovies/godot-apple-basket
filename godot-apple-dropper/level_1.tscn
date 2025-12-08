@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://6fqvgma5j1qx"]
+[gd_scene load_steps=10 format=3 uid="uid://6fqvgma5j1qx"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://cp4vh8klfw13f" path="res://basket.tscn" id="2_hn12h"]
 [ext_resource type="PackedScene" uid="uid://dv5o1w3ocbfpn" path="res://score_label.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://ddxwtluwf7sn3" path="res://golden_apple.tscn" id="3_rka8t"]
+[ext_resource type="PackedScene" uid="uid://lkrv3xufiibc" path="res://bomb.tscn" id="4_5rr72"]
 [ext_resource type="Texture2D" uid="uid://pfusvwgyk47p" path="res://sprites/orchard.jpg" id="4_ihfcg"]
 [ext_resource type="Script" uid="uid://bo1jg77x8l11x" path="res://pause.gd" id="6_5hph3"]
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="7_j7kpp"]
@@ -46,6 +47,8 @@ position = Vector2(395, 144)
 
 [node name="golden_apple" parent="." instance=ExtResource("3_rka8t")]
 
+[node name="bomb" parent="." instance=ExtResource("4_5rr72")]
+
 [node name="Basket" parent="." instance=ExtResource("2_hn12h")]
 position = Vector2(603, 546)
 collision_layer = 0
@@ -86,4 +89,5 @@ offset_bottom = 315.0
 
 [connection signal="body_entered" from="Basket" to="Apple" method="_on_basket_body_entered"]
 [connection signal="body_entered" from="Basket" to="golden_apple" method="_on_basket_body_entered"]
+[connection signal="body_entered" from="Basket" to="bomb" method="_on_basket_body_entered"]
 [connection signal="pressed" from="pause" to="pause" method="_on_pressed"]
