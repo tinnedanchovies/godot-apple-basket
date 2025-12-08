@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6fqvgma5j1qx"]
+[gd_scene load_steps=13 format=3 uid="uid://6fqvgma5j1qx"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://cp4vh8klfw13f" path="res://basket.tscn" id="2_hn12h"]
