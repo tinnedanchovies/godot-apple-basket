@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://6fqvgma5j1qx"]
+[gd_scene load_steps=14 format=3 uid="uid://6fqvgma5j1qx"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dv5o1w3ocbfpn" path="res://score_label.tscn" id="3_hn12h"]
@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="8_5rr72"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bjebc"]
-distance = -4.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
+size = Vector2(1139, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rr72"]
 size = Vector2(165, 724)
@@ -29,13 +29,15 @@ position = Vector2(566, 245)
 scale = Vector2(1.135, 1.135)
 texture = ExtResource("4_ihfcg")
 
-[node name="bottom" type="StaticBody2D" parent="."]
+[node name="bottom" type="Area2D" parent="."]
 position = Vector2(744, 692)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
-shape = SubResource("WorldBoundaryShape2D_bjebc")
+position = Vector2(-168.5, 55.5)
+shape = SubResource("RectangleShape2D_27bay")
 
 [node name="walls" type="StaticBody2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
 position = Vector2(-72.5, 351)
@@ -94,6 +96,7 @@ offset_top = 315.0
 offset_right = 570.0
 offset_bottom = 315.0
 
+[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="Apple" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="bomb" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="better_basket" method="_on_area_2d_2_body_entered"]

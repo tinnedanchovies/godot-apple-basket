@@ -1,6 +1,7 @@
 extends Control
 
-@onready var begin = get_node("/root/level_1/begin_game")
+@export var begin_node = ""
+@onready var begin = get_node(begin_node)
 
 func _ready() -> void:
 	get_tree().paused = true

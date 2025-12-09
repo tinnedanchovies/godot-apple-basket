@@ -7,6 +7,7 @@ func _ready():
 	score_board = get_node("/root/level_1/score_board/score")
 
 func _process(delta):
+	move_and_slide()
 	if Input.is_key_pressed(KEY_RIGHT):
 		position.x = position.x + 30
 
