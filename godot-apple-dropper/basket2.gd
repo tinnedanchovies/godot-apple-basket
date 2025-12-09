@@ -28,6 +28,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "bomb":
 		print("it's a golden apple")
 		Globals.score = Globals.score - 5
+		Globals.bomb_count = Globals.bomb_count + 1
 		score_board.text = str(Globals.score)
 		
 		
