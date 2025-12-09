@@ -5,6 +5,7 @@ var apple_speed = Vector2(0, 80)
 var golden_apple_speed = Vector2(0, 150)
 var random = 0
 var paused = false
+var bomb_count = 0
 #var timer = Timer.new()  
 var apple_counter = 0
 

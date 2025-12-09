@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dauh8fped3qon"]
+
+[ext_resource type="Script" uid="uid://ki7rprsjhgdt" path="res://health_bar.gd" id="1_m7ell"]
+[ext_resource type="Texture2D" uid="uid://buc2gqrr5s7j5" path="res://sprites/health_bar_empty.png" id="2_kdjhy"]
+[ext_resource type="Texture2D" uid="uid://bwd2mcypq2qnr" path="res://sprites/health_bar_heart.png" id="3_srckl"]
+
+[node name="health_bar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7ell")
+
+[node name="health_bar_sprite" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1120, 245)
+scale = Vector2(8, 8)
+texture = ExtResource("2_kdjhy")
+
+[node name="heart_1" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1120, 229)
+scale = Vector2(8, 8)
+texture = ExtResource("3_srckl")
+
+[node name="heart_2" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1200, 229)
+scale = Vector2(8, 8)
+texture = ExtResource("3_srckl")
+
+[node name="heart_3" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1280, 229)
+scale = Vector2(8, 8)
+texture = ExtResource("3_srckl")
