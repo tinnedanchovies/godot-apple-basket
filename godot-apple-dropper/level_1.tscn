@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6fqvgma5j1qx"]
+[gd_scene load_steps=16 format=3 uid="uid://6fqvgma5j1qx"]
 
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dv5o1w3ocbfpn" path="res://score_label.tscn" id="3_hn12h"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c4t13bk43kb3a" path="res://better_basket.tscn" id="5_5rr72"]
 [ext_resource type="Script" uid="uid://bo1jg77x8l11x" path="res://pause.gd" id="6_5hph3"]
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://biablt3bb3mt7" path="res://end_screen.tscn" id="8_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="8_5rr72"]
-[ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" path="res://health_bar.tscn" id="10_gyffv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(1139, 101)
@@ -49,11 +50,15 @@ position = Vector2(1252.5, 354)
 shape = SubResource("RectangleShape2D_gyffv")
 
 [node name="Apple" parent="." instance=ExtResource("1_hbghi")]
-position = Vector2(395, 144)
+position = Vector2(395, -44)
+collision_mask = 0
 
 [node name="golden_apple" parent="." instance=ExtResource("3_rka8t")]
+position = Vector2(0, -103)
 
 [node name="bomb" parent="." instance=ExtResource("4_5rr72")]
+position = Vector2(0, -66)
+collision_layer = 0
 
 [node name="better_basket" parent="." instance=ExtResource("5_5rr72")]
 position = Vector2(603, 546)
@@ -78,6 +83,13 @@ offset_bottom = 52.0
 text = "Pause"
 script = ExtResource("6_5hph3")
 
+[node name="end_screen" parent="." instance=ExtResource("8_1pe0h")]
+process_mode = 3
+offset_left = 570.0
+offset_top = 315.0
+offset_right = 570.0
+offset_bottom = 315.0
+
 [node name="pause_menu" parent="." instance=ExtResource("7_j7kpp")]
 offset_left = 572.0
 offset_top = 313.0
@@ -96,10 +108,11 @@ offset_left = 570.0
 offset_top = 315.0
 offset_right = 570.0
 offset_bottom = 315.0
+begin_node = "/root/level_1/begin_game"
 
-[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [node name="health_bar" parent="." instance=ExtResource("10_gyffv")]
 
+[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="Apple" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="bomb" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="better_basket" method="_on_area_2d_2_body_entered"]

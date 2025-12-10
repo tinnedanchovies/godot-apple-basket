@@ -15,7 +15,7 @@ func _physics_process(delta: float):
 			position.y = 0
 			position.x = randi_range(0, 1500)
 			velocity.y = 200
-		move_and_slide() 
+	move_and_slide() 
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "bomb":

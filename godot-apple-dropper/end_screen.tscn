@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://biablt3bb3mt7"]
+
+[ext_resource type="Script" uid="uid://cjiwf5lqhn2vo" path="res://end_screen.gd" id="1_d75mr"]
+[ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="1_pmjk2"]
+[ext_resource type="Texture2D" uid="uid://dprcsu4fjwmp" path="res://sprites/apple_standin.webp" id="2_d75mr"]
+[ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="3_be1gp"]
+[ext_resource type="Script" uid="uid://bcvbosrvg000d" path="res://next_level.gd" id="5_d75mr"]
+
+[node name="end_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d75mr")
+menuNode = "Panel"
+scoreNode = "Panel/score"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.5
+offset_top = -233.5
+offset_right = 365.5
+offset_bottom = 233.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.398003
+anchor_top = 0.188272
+anchor_right = 0.601997
+anchor_bottom = 0.283951
+offset_left = -42.9405
+offset_top = -56.4228
+offset_right = 37.9405
+offset_bottom = -52.1049
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.843137, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_pmjk2")
+theme_override_font_sizes/font_size = 40
+text = "You win!
+"
+horizontal_alignment = 1
+
+[node name="AppleStandin" type="Sprite2D" parent="Panel"]
+position = Vector2(480.5, 54.5)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("2_d75mr")
+
+[node name="AppleStandin2" type="Sprite2D" parent="Panel"]
+position = Vector2(240.5, 54.5)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("2_d75mr")
+
+[node name="restart" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.5
+offset_top = -193.0
+offset_right = 52.5
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Restart"
+script = ExtResource("3_be1gp")
+level = "res://level_1.tscn"
+
+[node name="to_start" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = 130.5
+offset_right = 52.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu"
+script = ExtResource("3_be1gp")
+level = "res://start_screen.tscn"
+
+[node name="next_level" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.442184
+anchor_right = 0.5
+anchor_bottom = 0.442184
+offset_left = -94.5
+offset_top = -60.5
+offset_right = 95.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Next Level"
+script = ExtResource("5_d75mr")
+next_level = "res://level_1.tscn"
+
+[connection signal="pressed" from="Panel/restart" to="Panel/restart" method="_on_pressed"]
+[connection signal="pressed" from="Panel/to_start" to="Panel/to_start" method="_on_pressed"]
+[connection signal="pressed" from="Panel/next_level" to="Panel/next_level" method="_on_pressed"]
