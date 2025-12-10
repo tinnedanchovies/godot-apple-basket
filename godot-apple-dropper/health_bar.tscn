@@ -21,20 +21,17 @@ position = Vector2(1120, 245)
 scale = Vector2(8, 8)
 texture = ExtResource("2_kdjhy")
 
-[node name="heart_1" type="Sprite2D" parent="."]
+[node name="heart_1" type="Sprite2D" parent="health_bar_sprite"]
 texture_filter = 3
-position = Vector2(1120, 229)
-scale = Vector2(8, 8)
+position = Vector2(0, -2)
 texture = ExtResource("3_srckl")
 
-[node name="heart_2" type="Sprite2D" parent="."]
+[node name="heart_2" type="Sprite2D" parent="health_bar_sprite"]
 texture_filter = 3
-position = Vector2(1200, 229)
-scale = Vector2(8, 8)
+position = Vector2(10, -2)
 texture = ExtResource("3_srckl")
 
-[node name="heart_3" type="Sprite2D" parent="."]
+[node name="heart_3" type="Sprite2D" parent="health_bar_sprite"]
 texture_filter = 3
-position = Vector2(1280, 229)
-scale = Vector2(8, 8)
+position = Vector2(20, -2)
 texture = ExtResource("3_srckl")

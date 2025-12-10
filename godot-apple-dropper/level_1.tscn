@@ -97,9 +97,9 @@ offset_top = 315.0
 offset_right = 570.0
 offset_bottom = 315.0
 
-[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [node name="health_bar" parent="." instance=ExtResource("10_gyffv")]
 
+[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="Apple" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="bomb" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="better_basket" method="_on_area_2d_2_body_entered"]

@@ -5,8 +5,10 @@ var apple_speed = Vector2(0, 80)
 var golden_apple_speed = Vector2(0, 150)
 var random = 0
 var paused = false
-var bomb_count = 0
-#var timer = Timer.new()  
+var life_count = 0
+#var timer = Timer.new() 
+
+ 
 var apple_counter = 0
 var level_1 = "res://level_1.tscn"
 var level_2 = "res://level_2.tscn"
