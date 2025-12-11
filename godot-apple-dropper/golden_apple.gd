@@ -10,7 +10,7 @@ func _ready():
 	
 func _physics_process(delta: float):
 		visible = false
-		if Globals.random >= 8:
+		if Globals.random >= 1:
 			visible = true
 			velocity.y += gravity
 			if position.y > 1100:
@@ -18,15 +18,19 @@ func _physics_process(delta: float):
 				position.x = randi_range(0, 1500)
 				velocity.y = 200
 			move_and_slide()
+	
 
-
-func _on_basket_body_entered(body: Node2D) -> void:
-	#remove apple when it falls in basket
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "golden_apple":
 		position.y = 0
 		position.x = randi_range(0, 1500)
 		velocity.y = 200
 		Globals.apple_counter = Globals.apple_counter + 1
 		print("apple counter:", Globals.apple_counter)
-	
-	
+
+
+func _on_bottom_body_entered(body: Node2D) -> void:
+	if body.name == "golden_apple":
+		position.y = 0
+		position.x = randi_range(0, 1500)
+		velocity.y = 200

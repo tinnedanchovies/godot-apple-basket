@@ -11,6 +11,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	#if the player catches the apple move it back to top
 	if body.name == "Apple":
 		position.y = 0
 		position.x = randi_range(0, 1150)
@@ -20,6 +21,7 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 
 
 func _on_bottom_body_entered(body: Node2D) -> void:
+	#in case the player doesn't catch the apples
 	if body.name == "Apple":
 		position.y = 0
 		position.x = randi_range(0, 1100)

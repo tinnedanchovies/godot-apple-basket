@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://biablt3bb3mt7" path="res://end_screen.tscn" id="8_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="8_5rr72"]
-[ext_resource type="PackedScene" path="res://health_bar.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="10_gyffv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(1139, 101)
@@ -32,7 +32,7 @@ scale = Vector2(1.135, 1.135)
 texture = ExtResource("4_ihfcg")
 
 [node name="bottom" type="Area2D" parent="."]
-position = Vector2(744, 692)
+position = Vector2(746, 696)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
 position = Vector2(-168.5, 55.5)
@@ -58,7 +58,6 @@ position = Vector2(0, -103)
 
 [node name="bomb" parent="." instance=ExtResource("4_5rr72")]
 position = Vector2(0, -66)
-collision_layer = 0
 
 [node name="better_basket" parent="." instance=ExtResource("5_5rr72")]
 position = Vector2(603, 546)
@@ -113,7 +112,10 @@ begin_node = "/root/level_1/begin_game"
 [node name="health_bar" parent="." instance=ExtResource("10_gyffv")]
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="bottom" to="golden_apple" method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="bottom" to="bomb" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="Apple" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="better_basket/Area2D2" to="golden_apple" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="bomb" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="better_basket/Area2D2" to="better_basket" method="_on_area_2d_2_body_entered"]
 [connection signal="pressed" from="pause" to="pause" method="_on_pressed"]
