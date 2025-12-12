@@ -97,8 +97,6 @@ offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
-script = ExtResource("4_p81d2")
-level = "res://level_1.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="to_start" type="Button" parent="Panel"]
@@ -116,7 +114,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Menu"
 script = ExtResource("4_p81d2")
-level = "res://start_screen.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="continue" type="Button" parent="Panel"]

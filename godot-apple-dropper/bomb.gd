@@ -20,10 +20,10 @@ func _physics_process(delta: float):
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "bomb":
 		print("bomb entered")
+		$AudioStreamPlayer2D.play()
 		position.y = 0
 		position.x = randi_range(0, 1500)
 		velocity.y = 200
-		
 
 func _on_bottom_body_entered(body: Node2D) -> void:
 	if body.name == "bomb":

@@ -83,11 +83,11 @@ text = "Pause"
 script = ExtResource("6_5hph3")
 
 [node name="end_screen" parent="." instance=ExtResource("8_1pe0h")]
-process_mode = 3
 offset_left = 570.0
 offset_top = 315.0
 offset_right = 570.0
 offset_bottom = 315.0
+next_level = "res://level_2.tscn"
 
 [node name="pause_menu" parent="." instance=ExtResource("7_j7kpp")]
 offset_left = 572.0
