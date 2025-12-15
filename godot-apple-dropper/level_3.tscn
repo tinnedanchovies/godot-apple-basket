@@ -57,6 +57,7 @@ position = Vector2(242, -21)
 [node name="golden_apple" parent="." instance=ExtResource("4_ghrvs")]
 
 [node name="better_basket" parent="." instance=ExtResource("5_jvy75")]
+scoreboard_node = "/root/level_3/better_basket"
 
 [node name="Area2D2" type="Area2D" parent="better_basket"]
 

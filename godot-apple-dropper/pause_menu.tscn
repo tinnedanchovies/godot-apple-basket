@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://6hykbqsg0gwq"]
+[gd_scene load_steps=7 format=3 uid="uid://6hykbqsg0gwq"]
 
 [ext_resource type="Script" uid="uid://dvrsnlbgpljcg" path="res://pause_menu.gd" id="1_05uyy"]
 [ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_p81d2"]
 [ext_resource type="Texture2D" uid="uid://dprcsu4fjwmp" path="res://sprites/apple_standin.webp" id="3_2nc7s"]
+[ext_resource type="Script" uid="uid://bblqk6hdodyvy" path="res://restart.gd" id="4_d3xb4"]
 [ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_p81d2"]
 [ext_resource type="Script" uid="uid://btb4xcds2xjfy" path="res://continue.gd" id="5_2nc7s"]
 
@@ -97,6 +98,7 @@ offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
+script = ExtResource("4_d3xb4")
 metadata/_edit_use_anchors_ = true
 
 [node name="to_start" type="Button" parent="Panel"]

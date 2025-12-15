@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ihv5v0fowl3y"]
+[gd_scene load_steps=7 format=3 uid="uid://ihv5v0fowl3y"]
 
 [ext_resource type="Script" uid="uid://cjiwf5lqhn2vo" path="res://end_screen.gd" id="1_jclhh"]
 [ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_m3e5g"]
 [ext_resource type="Texture2D" uid="uid://dprcsu4fjwmp" path="res://sprites/apple_standin.webp" id="3_u6pt3"]
 [ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_beduj"]
+[ext_resource type="Script" uid="uid://cpy03j5o0enlw" path="res://to_start.gd" id="5_m3e5g"]
 [ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="5_wabui"]
 
 [node name="end" type="Control"]
@@ -93,7 +94,7 @@ offset_bottom = 171.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Menu"
-script = ExtResource("4_beduj")
+script = ExtResource("5_m3e5g")
 
 [node name="health_bar" parent="Panel" instance=ExtResource("5_wabui")]
 layout_mode = 1
