@@ -87,7 +87,7 @@ offset_left = 570.0
 offset_top = 315.0
 offset_right = 570.0
 offset_bottom = 315.0
-next_level = "res://level_2.tscn"
+points = 15
 
 [node name="pause_menu" parent="." instance=ExtResource("7_j7kpp")]
 offset_left = 572.0

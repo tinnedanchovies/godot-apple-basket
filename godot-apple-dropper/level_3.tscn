@@ -1,3 +1,115 @@
-[gd_scene format=3 uid="uid://br7krk6almur0"]
+[gd_scene load_steps=15 format=3 uid="uid://br7krk6almur0"]
+
+[ext_resource type="Texture2D" uid="uid://pfusvwgyk47p" path="res://sprites/orchard.jpg" id="1_b60u5"]
+[ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="2_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://lkrv3xufiibc" path="res://bomb.tscn" id="3_833wy"]
+[ext_resource type="PackedScene" uid="uid://ddxwtluwf7sn3" path="res://golden_apple.tscn" id="4_ghrvs"]
+[ext_resource type="PackedScene" uid="uid://c4t13bk43kb3a" path="res://better_basket.tscn" id="5_jvy75"]
+[ext_resource type="PackedScene" uid="uid://dv5o1w3ocbfpn" path="res://score_label.tscn" id="6_g0tlw"]
+[ext_resource type="Script" uid="uid://bo1jg77x8l11x" path="res://pause.gd" id="7_keufu"]
+[ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="8_joegk"]
+[ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="9_m8gss"]
+[ext_resource type="PackedScene" uid="uid://ihv5v0fowl3y" path="res://end.tscn" id="10_b60u5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra6nl"]
+size = Vector2(1139, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxey3"]
+size = Vector2(165, 724)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hpui"]
+size = Vector2(217, 722)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g005c"]
+size = Vector2(152, 70)
 
 [node name="level_3" type="Node2D"]
+
+[node name="background_image_lvl_3" type="Sprite2D" parent="."]
+position = Vector2(566, 245)
+scale = Vector2(1.135, 1.135)
+texture = ExtResource("1_b60u5")
+
+[node name="bottom" type="Area2D" parent="."]
+position = Vector2(746, 696)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
+position = Vector2(-168.5, 55.5)
+shape = SubResource("RectangleShape2D_ra6nl")
+
+[node name="walls" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2(-72.5, 351)
+shape = SubResource("RectangleShape2D_gxey3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2(1252.5, 354)
+shape = SubResource("RectangleShape2D_4hpui")
+
+[node name="Apple" parent="." instance=ExtResource("2_kmy7e")]
+position = Vector2(395, 144)
+
+[node name="bomb" parent="." instance=ExtResource("3_833wy")]
+position = Vector2(242, -21)
+
+[node name="golden_apple" parent="." instance=ExtResource("4_ghrvs")]
+
+[node name="better_basket" parent="." instance=ExtResource("5_jvy75")]
+
+[node name="Area2D2" type="Area2D" parent="better_basket"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="better_basket/Area2D2"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_g005c")
+
+[node name="score_board" parent="." instance=ExtResource("6_g0tlw")]
+offset_left = 17.0
+offset_top = 10.0
+offset_right = 17.0
+offset_bottom = 10.0
+
+[node name="pause" type="Button" parent="."]
+offset_left = 1019.0
+offset_top = 16.0
+offset_right = 1132.0
+offset_bottom = 52.0
+text = "Pause"
+script = ExtResource("7_keufu")
+
+[node name="pause_menu" parent="." instance=ExtResource("8_joegk")]
+offset_left = 572.0
+offset_top = 313.0
+offset_right = 572.0
+offset_bottom = 313.0
+menuNode = "/root/level_3/pause_menu"
+scoreNode = "/root/level_3/pause_menu/Panel/score"
+
+[node name="begin_game" parent="." instance=ExtResource("9_m8gss")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 570.0
+offset_top = 315.0
+offset_right = 570.0
+offset_bottom = 315.0
+begin_node = "/root/level_3/begin_game"
+
+[node name="end" parent="." instance=ExtResource("10_b60u5")]
+offset_left = 571.0
+offset_top = 314.0
+offset_right = 571.0
+offset_bottom = 314.0
+points = 50
+
+[connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="bottom" to="bomb" method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="bottom" to="golden_apple" method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="better_basket/Area2D2" to="Apple" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="better_basket/Area2D2" to="bomb" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="better_basket/Area2D2" to="golden_apple" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="better_basket/Area2D2" to="better_basket" method="_on_area_2d_2_body_entered"]
+[connection signal="pressed" from="pause" to="pause" method="_on_pressed"]

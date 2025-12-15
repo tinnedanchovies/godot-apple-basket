@@ -14,21 +14,20 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_LEFT):
 		position.x = position.x - 30
 
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	if body.name == "bomb":
-		print("it's a bomb")
-		Globals.score = Globals.score - 5
-		Globals.life_count = Globals.life_count + 1
-		score_board.text = str(Globals.score)
+#func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	#if body.name == "bomb":
+		#print("it's a bomb")
+		#Globals.score = Globals.score - 5
+		#Globals.life_count = Globals.life_count + 1
+		#score_board.text = str(Globals.score)
+		#
+	#if body.name == "golden_apple":
+		#print("it's a golden apple")
+		#Globals.score = Globals.score + 5
+		#score_board.text = str(Globals.score)
+	#
+	#if body.name == "Apple":
+		#print("it's just an apple")
+		#Globals.score = Globals.score + 1
+		#score_board.text = str(Globals.score)
 		
-	if body.name == "golden_apple":
-		print("it's a golden apple")
-		Globals.score = Globals.score + 5
-		score_board.text = str(Globals.score)
-	
-	if body.name == "Apple":
-		print("it's just an apple")
-		Globals.score = Globals.score + 1
-		score_board.text = str(Globals.score)
-		
-	
