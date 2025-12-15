@@ -6,6 +6,7 @@ extends Control
 @onready var score = get_node(scoreNode)
 
 func _ready() -> void:
+	print("menu: ", menu)
 	menu.hide()
 
 func _process(delta: float) -> void:

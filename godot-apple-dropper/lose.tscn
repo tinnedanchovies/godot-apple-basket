@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://5gxb8ak6m4lh"]
+
+[ext_resource type="Script" uid="uid://uhuqikkkfalu" path="res://lose.gd" id="1_bpxic"]
+[ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_s23sx"]
+[ext_resource type="Texture2D" uid="uid://cjef6iwgwv7wu" path="res://sprites/pixel_bomb.png" id="3_84ume"]
+[ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_dane3"]
+[ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="5_7qarf"]
+
+[node name="lose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bpxic")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.5
+offset_top = -233.5
+offset_right = 365.5
+offset_bottom = 233.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.398003
+anchor_top = 0.188272
+anchor_right = 0.601997
+anchor_bottom = 0.283951
+offset_left = -42.9405
+offset_top = -56.4228
+offset_right = 37.9405
+offset_bottom = -52.1049
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.843137, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_s23sx")
+theme_override_font_sizes/font_size = 40
+text = "You win!
+"
+horizontal_alignment = 1
+
+[node name="bomb" type="Sprite2D" parent="Panel"]
+position = Vector2(480.5, 54.5)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_84ume")
+
+[node name="bomb2" type="Sprite2D" parent="Panel"]
+position = Vector2(240.5, 54.5)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_84ume")
+
+[node name="restart" type="Button" parent="Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.5
+offset_top = -193.0
+offset_right = 52.5
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Restart"
+script = ExtResource("4_dane3")
+
+[node name="to_start" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = 130.5
+offset_right = 52.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu"
+script = ExtResource("4_dane3")
+
+[node name="health_bar" parent="Panel" instance=ExtResource("5_7qarf")]
+layout_mode = 1
+offset_left = -650.5
+offset_top = 122.5
+offset_right = -650.5
+offset_bottom = 122.5
+
+[connection signal="pressed" from="Panel/restart" to="Panel/restart" method="_on_pressed"]
+[connection signal="pressed" from="Panel/to_start" to="Panel/to_start" method="_on_pressed"]
