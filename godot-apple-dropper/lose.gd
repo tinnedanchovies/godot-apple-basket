@@ -5,7 +5,6 @@ extends Control
 
 
 func _ready() -> void:
-	print(menu)
 	menu.hide()
 	
 

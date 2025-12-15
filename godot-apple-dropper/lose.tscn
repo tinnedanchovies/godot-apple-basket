@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://5gxb8ak6m4lh"]
+[gd_scene load_steps=6 format=3 uid="uid://dc3rl332763fu"]
 
-[ext_resource type="Script" uid="uid://uhuqikkkfalu" path="res://lose.gd" id="1_bpxic"]
+[ext_resource type="Script" path="res://lose.gd" id="1_bpxic"]
 [ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_s23sx"]
 [ext_resource type="Texture2D" uid="uid://cjef6iwgwv7wu" path="res://sprites/pixel_bomb.png" id="3_84ume"]
 [ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_dane3"]
@@ -45,17 +45,16 @@ theme_override_colors/font_outline_color = Color(0.843137, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_s23sx")
 theme_override_font_sizes/font_size = 40
-text = "You win!
-"
+text = "You Lose :("
 horizontal_alignment = 1
 
 [node name="bomb" type="Sprite2D" parent="Panel"]
-position = Vector2(480.5, 54.5)
+position = Vector2(484.5, 54.5)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_84ume")
 
 [node name="bomb2" type="Sprite2D" parent="Panel"]
-position = Vector2(240.5, 54.5)
+position = Vector2(236.5, 54.5)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_84ume")
 

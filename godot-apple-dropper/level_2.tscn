@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dfjbwsohf2o5v"]
+[gd_scene load_steps=16 format=3 uid="uid://dfjbwsohf2o5v"]
 
 [ext_resource type="Texture2D" uid="uid://pfusvwgyk47p" path="res://sprites/orchard.jpg" id="1_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="1_xdadj"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="8_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="9_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://biablt3bb3mt7" path="res://end_screen.tscn" id="10_15wb7"]
+[ext_resource type="PackedScene" uid="uid://dc3rl332763fu" path="res://lose.tscn" id="11_eoq84"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15wb7"]
 size = Vector2(1139, 101)
@@ -104,6 +105,13 @@ offset_top = 312.0
 offset_right = 571.0
 offset_bottom = 312.0
 points = 30
+
+[node name="lose" parent="." instance=ExtResource("11_eoq84")]
+offset_left = 578.0
+offset_top = 317.0
+offset_right = 578.0
+offset_bottom = 317.0
+menuNode = "/root/level_2/lose/Panel/Label"
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="bottom" to="bomb" method="_on_bottom_body_entered"]
