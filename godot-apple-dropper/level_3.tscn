@@ -108,6 +108,10 @@ offset_bottom = 314.0
 points = 50
 
 [node name="lose" parent="." instance=ExtResource("11_kmy7e")]
+offset_left = 573.0
+offset_top = 318.0
+offset_right = 573.0
+offset_bottom = 318.0
 menuNode = "/root/level_3/lose/Panel/Label"
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
