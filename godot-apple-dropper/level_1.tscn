@@ -118,7 +118,7 @@ offset_left = 572.0
 offset_top = 312.0
 offset_right = 572.0
 offset_bottom = 312.0
-menuNode = "/root/level_1/lose/Panel/Label"
+menuNode = "/root/level_1/lose/Panel"
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="bottom" to="golden_apple" method="_on_bottom_body_entered"]
