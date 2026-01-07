@@ -6,7 +6,8 @@ extends Control
 func _ready() -> void:
 	menu.hide()
 	
-func _process(_delta):
-	if Globals.life_count == 0:
+
+func _process(delta):
+	if Globals.life_count == 3:
 		menu.show()
 	
