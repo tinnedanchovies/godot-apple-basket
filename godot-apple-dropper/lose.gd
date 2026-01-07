@@ -9,6 +9,6 @@ func _ready() -> void:
 	
 
 func _process(delta):
-	if Globals.life_count == 0:
+	if Globals.life_count == 3:
 		menu.show()
 	

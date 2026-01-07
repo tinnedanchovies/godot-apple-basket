@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="8_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="9_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://biablt3bb3mt7" path="res://end_screen.tscn" id="10_15wb7"]
-[ext_resource type="PackedScene" uid="uid://dc3rl332763fu" path="res://lose.tscn" id="11_eoq84"]
+[ext_resource type="PackedScene" uid="uid://5gxb8ak6m4lh" path="res://lose.tscn" id="11_eoq84"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15wb7"]
 size = Vector2(1139, 101)

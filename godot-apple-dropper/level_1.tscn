@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://biablt3bb3mt7" path="res://end_screen.tscn" id="8_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="8_5rr72"]
 [ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="10_gyffv"]
-[ext_resource type="PackedScene" uid="uid://dc3rl332763fu" path="res://lose.tscn" id="12_27bay"]
+[ext_resource type="PackedScene" uid="uid://5gxb8ak6m4lh" path="res://lose.tscn" id="12_27bay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(1139, 101)
@@ -114,11 +114,6 @@ begin_node = "/root/level_1/begin_game"
 [node name="health_bar" parent="." instance=ExtResource("10_gyffv")]
 
 [node name="lose" parent="." instance=ExtResource("12_27bay")]
-offset_left = 572.0
-offset_top = 312.0
-offset_right = 572.0
-offset_bottom = 312.0
-menuNode = "/root/level_1/lose/Panel/Label"
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="bottom" to="golden_apple" method="_on_bottom_body_entered"]
