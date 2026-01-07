@@ -6,6 +6,7 @@ extends Control
 func _ready() -> void:
 	get_tree().paused = true
 	Globals.apple_speed = Vector2(0, 0)
+	Globals.score = 0
 	begin.show()
 
 func _on_start_pressed() -> void:

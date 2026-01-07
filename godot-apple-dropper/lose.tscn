@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://5gxb8ak6m4lh"]
+[gd_scene load_steps=6 format=3 uid="uid://dc3rl332763fu"]
 
 [ext_resource type="Script" uid="uid://uhuqikkkfalu" path="res://lose.gd" id="1_bpxic"]
 [ext_resource type="FontFile" uid="uid://57b1mhuocbdw" path="res://font/Kirsty Rg.otf" id="2_s23sx"]
 [ext_resource type="Texture2D" uid="uid://cjef6iwgwv7wu" path="res://sprites/pixel_bomb.png" id="3_84ume"]
 [ext_resource type="Script" uid="uid://tfivk1yqq2oh" path="res://button.gd" id="4_dane3"]
-[ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="5_7qarf"]
+[ext_resource type="Texture2D" uid="uid://buc2gqrr5s7j5" path="res://sprites/health_bar_empty.png" id="5_bpxic"]
 
 [node name="lose" type="Control"]
 layout_mode = 3
@@ -91,12 +91,11 @@ grow_vertical = 2
 text = "Menu"
 script = ExtResource("4_dane3")
 
-[node name="health_bar" parent="Panel" instance=ExtResource("5_7qarf")]
-layout_mode = 1
-offset_left = -650.5
-offset_top = 122.5
-offset_right = -650.5
-offset_bottom = 122.5
+[node name="HealthBarEmpty" type="Sprite2D" parent="Panel"]
+texture_filter = 3
+position = Vector2(477.5, 402.5)
+scale = Vector2(9.281251, 9.281251)
+texture = ExtResource("5_bpxic")
 
 [connection signal="pressed" from="Panel/restart" to="Panel/restart" method="_on_pressed"]
 [connection signal="pressed" from="Panel/to_start" to="Panel/to_start" method="_on_pressed"]

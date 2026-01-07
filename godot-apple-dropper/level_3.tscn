@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://br7krk6almur0"]
+[gd_scene load_steps=17 format=3 uid="uid://br7krk6almur0"]
 
 [ext_resource type="Texture2D" uid="uid://pfusvwgyk47p" path="res://sprites/orchard.jpg" id="1_b60u5"]
 [ext_resource type="PackedScene" uid="uid://d2o3yn18md2wy" path="res://apple.tscn" id="2_kmy7e"]
@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://6hykbqsg0gwq" path="res://pause_menu.tscn" id="8_joegk"]
 [ext_resource type="PackedScene" uid="uid://bou1otvulv12u" path="res://begin_game.tscn" id="9_m8gss"]
 [ext_resource type="PackedScene" uid="uid://ihv5v0fowl3y" path="res://end.tscn" id="10_b60u5"]
-[ext_resource type="PackedScene" uid="uid://5gxb8ak6m4lh" path="res://lose.tscn" id="11_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://dc3rl332763fu" path="res://lose.tscn" id="11_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://dauh8fped3qon" path="res://health_bar.tscn" id="12_833wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra6nl"]
 size = Vector2(1139, 101)
@@ -112,7 +113,9 @@ offset_left = 573.0
 offset_top = 318.0
 offset_right = 573.0
 offset_bottom = 318.0
-menuNode = "/root/level_3/lose/Panel/Label"
+menuNode = "/root/level_3/lose/Panel"
+
+[node name="health_bar" parent="." instance=ExtResource("12_833wy")]
 
 [connection signal="body_entered" from="bottom" to="Apple" method="_on_bottom_body_entered"]
 [connection signal="body_entered" from="bottom" to="bomb" method="_on_bottom_body_entered"]

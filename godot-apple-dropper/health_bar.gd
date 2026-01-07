@@ -18,7 +18,7 @@ func _process(delta):
 		heart_1.visible = false
 		heart_2.visible = false
 	
-	elif Globals.life_count == 3:
+	elif Globals.life_count >= 3:
 		heart_1.visible = false
 		heart_2.visible = false
 		heart_3.visible = false

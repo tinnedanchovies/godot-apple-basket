@@ -6,9 +6,8 @@ var golden_apple_speed = Vector2(0, 150)
 var random = 0
 var paused = false
 var life_count = 0
-#var timer = Timer.new() 
+var level = ""
 
- 
 var apple_counter = 0
 
 func _ready():  
@@ -28,4 +27,3 @@ func randomizer():
 		random = randi_range(1,10)
 		print("random number: ", random)
 		break
-	
